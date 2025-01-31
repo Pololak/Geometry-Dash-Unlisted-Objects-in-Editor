@@ -71,7 +71,7 @@ class $modify(UnlistedObjectsUI, EditorUI) {
 		bool unecessary = Mod::get()->template getSettingValue<bool>("doNotInclude");
 		bool active = Mod::get()->template getSettingValue<bool>("activate");
 		bool noUnstable = true;
-		//bool noUnstable = Mod::get()->template getSettingValue<bool>("removeUnstable");
+		bool noUnstable = Mod::get()->template getSettingValue<bool>("removeUnstable");
 
 		if (separateTab=="Separate Tabs" && active) {
 			// add the new blocks tab
@@ -506,7 +506,7 @@ void addObj(EditorUI* ui, int objId, enum ObjTypes necessary, cocos2d::CCArray* 
 	bool unecessary = Mod::get()->template getSettingValue<bool>("doNotInclude");
 	bool active = Mod::get()->template getSettingValue<bool>("activate");
 	bool noUnstable = true;
-	//bool noUnstable = Mod::get()->template getSettingValue<bool>("removeUnstable");
+	bool noUnstable = Mod::get()->template getSettingValue<bool>("removeUnstable");
 
 	// if all objects are to be shown, 
 	// or if it is unecessary and !unecessary, 
@@ -724,7 +724,7 @@ class $modify(EditButtonBar) {
 			// replaced with general all-colors trigger in 2.0
 			ADD_OBJ(29, UNSTABLE);
 			ADD_OBJ(30, UNSTABLE);
-			ADD_OBJ(104, UNSTABLE);
+			//ADD_OBJ(104, UNSTABLE); // Old line color trigger got removed in 2.2 and replaced with id 915
 			ADD_OBJ(105, UNSTABLE);
 			ADD_OBJ(744, UNSTABLE);
 			ADD_OBJ(915, UNSTABLE);
