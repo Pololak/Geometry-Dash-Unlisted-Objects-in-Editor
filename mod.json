@@ -31,7 +31,14 @@
 			"enable-if": "activate",
 			"default": "Normal Tabs",
 			"one-of": [ "Normal Tabs", "Separate Tabs", "Single Tab" ]
-		}
+		},
+	        "removeUnstable":{
+		"name": "Remove unstable blocks",
+		"description": "Removes blocks that are likely to cause the game to crash. I do not recommend turning this off",
+		"type": "bool",
+		"default": true,
+		"enable-if": "activate"
+	        }
 	},
 	"resources": {
 		"sprites": [
